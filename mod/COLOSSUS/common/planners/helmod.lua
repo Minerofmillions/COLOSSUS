@@ -77,7 +77,7 @@ function Load_helmod_bus(factory_object, full_config)
                 end
                 local beacon_name
                 local beacon_modules = {}
-                if recipe.beacon.count > 0 then
+                if recipe.beacon and recipe.beacon.count > 0 then
                     beacon_name = recipe.beacon.name
                     for module_name, module_count in pairs(recipe.beacon.modules) do
                         table.insert(beacon_modules, ModuleCount.new(module_name, module_count))
